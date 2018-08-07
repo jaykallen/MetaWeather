@@ -111,6 +111,7 @@ public class CoordActivity extends AppCompatActivity {
             Place chosen = mPlaces.get(getAdapterPosition());
             Timber.d("The selected item is " + chosen.title + ", woeid=" + chosen.woeid);
             Intent intent = new Intent(CoordActivity.this, ForecastActivity.class);
+            intent.putExtra("place", chosen.title);
             intent.putExtra("woeid", "" + chosen.woeid);
             startActivity(intent);
         }

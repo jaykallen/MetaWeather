@@ -13,6 +13,7 @@ import timber.log.Timber;
 // I will use Retrofit with Dagger2 and RxJava
 // MainActivity in MVP Design Pattern to demonstrate that I know how to do it.
 // Other activities may use it depending on how much time I have.
+// Normally I would put package names under Uncle Bob's Clean Architecture if I had time.
 
 public class MainActivity extends AppCompatActivity implements MainContract.View {
     private MainContract.Presenter presenter;

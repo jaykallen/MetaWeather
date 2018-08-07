@@ -16,22 +16,27 @@ import io.reactivex.observers.DisposableObserver;
 import timber.log.Timber;
 
 public class ForecastActivity extends AppCompatActivity {
-    String woeid;
-    Weather mWeather;
-    List<ConsolidatedWeather> consolidatedWeathers;
+    private String place;
+    private String woeid;
+    private Weather mWeather;
+    private List<ConsolidatedWeather> consolidatedWeathers;
     private RecyclerAdapter mRecyclerAdapter;
+    private TextView forecastText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast);
+        forecastText = findViewById(R.id.forecastText);
         Timber.d(" *** Forecast Activity ***");
         getExtras();
         listenCreate();
     }
 
     private void getExtras() {
+        place = getIntent().getStringExtra("place");
         woeid = getIntent().getStringExtra("woeid");
+        forecastText.setText("The forecast for " + place + " is:");
         Timber.d("The woeid is " + woeid);
     }
 

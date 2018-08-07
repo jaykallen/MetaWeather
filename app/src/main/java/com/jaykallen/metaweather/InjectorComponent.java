@@ -12,5 +12,5 @@ public interface InjectorComponent {
 
     void inject(ForecastPresenter forecastPresenter);
 
-
+    void inject(NameSearchPresenter nameSearchPresenter);
 }

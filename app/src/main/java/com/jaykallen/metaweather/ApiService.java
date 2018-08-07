@@ -15,4 +15,7 @@ public interface ApiService {
 
     @GET("/api/location/search")
     Call<List<Place>> queryCoord(@Query("lattlong") String lattlong);
+
+    @GET("/api/location/search")
+    Call<List<Place>> queryName(@Query("query") String name);
 }
