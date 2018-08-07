@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="08/6/2018"
+        android:id="@+id/dateText"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Cloudy"
+        android:id="@+id/descText"
+        android:textSize="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="20dp"
+        android:text="70 Low "
+        android:id="@+id/minTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateText"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:text="100 High"
+        android:textSize="20dp"
+        android:layout_below="@id/dateText"
+        android:layout_toRightOf="@id/minTempText"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/maxTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>
